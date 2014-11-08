@@ -1,0 +1,2 @@
+127.0.0.1 - - [07/Nov/2014:22:47:50 +0100] "GET /services/dummy HTTP/1.1" 200 54 http-bio-8080-exec-1 222
+127.0.0.1 - - [07/Nov/2014:22:47:55 +0100] "GET /services/dummy/25634 HTTP/1.1" 200 62 http-bio-8080-exec-3 28
