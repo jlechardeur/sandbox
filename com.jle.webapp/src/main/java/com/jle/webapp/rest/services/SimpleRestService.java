@@ -11,7 +11,7 @@ import com.jle.webapp.rest.pojo.Dummy;
 @Controller
 public class SimpleRestService {
 	
-	@RequestMapping(value = "/services/dummy", method = RequestMethod.GET)
+	@RequestMapping(value = "/v1.0/dummies", method = RequestMethod.GET)
     public @ResponseBody Dummy getDummy() {
         Dummy dummy = new Dummy();
         dummy.setId(1);
@@ -19,7 +19,7 @@ public class SimpleRestService {
         return dummy;
     }
 	
-	@RequestMapping(value = "/services/dummy/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/v1.0/dummies/{id}", method = RequestMethod.GET)
     public @ResponseBody Dummy getDummy(@PathVariable("id") int id) {
         Dummy dummy = new Dummy();
         dummy.setId(1);
