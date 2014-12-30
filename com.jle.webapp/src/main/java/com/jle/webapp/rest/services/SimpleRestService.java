@@ -1,7 +1,10 @@
 package com.jle.webapp.rest.services;
 
+import java.util.Date;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -25,5 +28,11 @@ public class SimpleRestService {
         dummy.setId(1);
         dummy.setName("dummyGET-"+id);
         return dummy;
+    }
+	
+	@RequestMapping(value = "/v1.0/dummies", method = RequestMethod.POST)
+    public @ResponseBody Dummy setDummy(@RequestBody Dummy dummy) {
+        dummy.setCreatedDate(new Date());
+		return dummy;
     }
 }
